@@ -1,0 +1,18 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.CryptoApplication" parent="Theme.Material3.DayNight.NoActionBar">
+
+    </style>
+
+    <style name="Theme.CryptoApplication" parent="Base.Theme.CryptoApplication" />
+
+    <style name="ToolbarTitleBold" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- Toolbar and Status Bar Color -->
+        <item name="android:colorPrimary">#78C5FF</item>
+    </style>
+</resources>

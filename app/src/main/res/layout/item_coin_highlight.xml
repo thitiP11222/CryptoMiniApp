@@ -1,0 +1,62 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+    <!-- Coin Info Section -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!-- Coin Symbol -->
+        <TextView
+            android:id="@+id/coinSymbol5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Coin URL (Clickable) -->
+        <TextView
+            android:id="@+id/coinUrl5"
+            android:layout_width="277dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <!-- Coin Icon (Aligned to the Right) -->
+    <ImageView
+        android:id="@+id/coinIcon5"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="end"
+        android:layout_marginStart="8dp"
+        android:scaleType="centerCrop" />
+</LinearLayout>
+
+    <!-- Bottom Border (Thin Line) -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#EEEEEE"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"/>
+
+</LinearLayout>
