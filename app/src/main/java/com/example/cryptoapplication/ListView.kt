@@ -14,6 +14,11 @@ import coil.decode.SvgDecoder
 
 class ListView(private val coins: List<Coin>) : RecyclerView.Adapter<ListView.CoinViewHolder>() {
 
+    companion object {
+        private const val TYPE_HIGHLIGHT = 0
+        private const val TYPE_NORMAL = 1
+    }
+
     override fun getItemViewType(position: Int) = if ((position + 1) % 5 == 0) TYPE_HIGHLIGHT else TYPE_NORMAL
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
@@ -22,8 +27,9 @@ class ListView(private val coins: List<Coin>) : RecyclerView.Adapter<ListView.Co
             parent, false
         ), viewType)
 
+    //Binding Data
     override fun onBindViewHolder(holder: CoinViewHolder, position: Int) = holder.bind(coins[position])
-
+    //Count Item
     override fun getItemCount() = coins.size
 
     class CoinViewHolder(view: View, private val viewType: Int) : RecyclerView.ViewHolder(view) {
@@ -41,14 +47,11 @@ class ListView(private val coins: List<Coin>) : RecyclerView.Adapter<ListView.Co
             }
             icon.loadImage(coin.iconUrl)
         }
-
+        //Loading Images
         private fun ImageView.loadImage(url: String) =
             if (url.endsWith(".svg")) load(url) { decoderFactory(SvgDecoder.Factory()); crossfade(true) }
             else Glide.with(context).load(url).into(this)
     }
 
-    companion object {
-        private const val TYPE_HIGHLIGHT = 0
-        private const val TYPE_NORMAL = 1
-    }
+
 }
